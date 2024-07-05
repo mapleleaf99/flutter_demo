@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/components/tabbar_item.dart';
 import 'package:flutter_demo/views/game/game.dart';
 import 'package:flutter_demo/views/home/home.dart';
 import 'package:flutter_demo/views/mine/mine.dart';
@@ -16,15 +17,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "APP",
       theme: ThemeData(
-        primarySwatch: Colors.red,
-        useMaterial3: false,
+        // primarySwatch: Colors.blue,
+        // useMaterial3: false,
         brightness: Brightness.light,
         splashColor: Colors.transparent,
         highlightColor: Colors.transparent
       ),
-      home: const Scaffold(
-        body: ContentPage(),
-      ),
+      home: ContentPage(),
     );
   }
 }
@@ -47,23 +46,11 @@ class _ContentPageState extends State<ContentPage> {
         selectedFontSize: 14,
         unselectedFontSize: 14,
         type: BottomNavigationBarType.fixed,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "首页"
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.book),
-              label: "行情",
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.article),
-              label: "游戏"
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.add),
-              label: "我的"
-          ),
+        items: [
+          TabbarItem("home", "首页"),
+          TabbarItem("quotes", "行情"),
+          TabbarItem("game", "游戏"),
+          TabbarItem("my", "我的"),
         ],
         onTap: (index) {
           setState(() {

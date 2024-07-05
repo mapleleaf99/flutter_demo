@@ -45,7 +45,8 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^3.0.0
+  flutter_lints: ^4.0.0
+  dio: ^5.5.0+1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -59,9 +60,23 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+     - assets/images/
+
+#    tabbar
+     - assets/images/tabbar/home_def.png
+     - assets/images/tabbar/home_sel.png
+     - assets/images/tabbar/quotes_def.png
+     - assets/images/tabbar/quotes_sel.png
+     - assets/images/tabbar/game_def.png
+     - assets/images/tabbar/game_sel.png
+     - assets/images/tabbar/my_def.png
+     - assets/images/tabbar/my_sel.png
+#     home
+     - assets/images/home/default_avatar.png
+     - assets/images/home/logo.png
+     - assets/images/home/massage.png
+     - assets/images/home/default.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

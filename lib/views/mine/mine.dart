@@ -1,30 +1,30 @@
 import 'package:flutter/material.dart';
 
-class Mine extends StatefulWidget {
+class Mine extends StatelessWidget {
   const Mine({super.key});
 
-  @override
-  State<Mine> createState() => _MineState();
-}
-
-class _MineState extends State<Mine> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("我的"),
       ),
-      body: const ContentWidget(),
+      body: const MineContent(),
     );
   }
 }
+class MineContent extends StatefulWidget {
+  const MineContent({super.key});
 
-class ContentWidget extends StatelessWidget {
-  const ContentWidget({super.key});
+  @override
+  State<MineContent> createState() => _MineContentState();
+}
 
+class _MineContentState extends State<MineContent> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
   }
 }
+
 
